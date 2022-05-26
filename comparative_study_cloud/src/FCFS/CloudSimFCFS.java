@@ -40,6 +40,12 @@ public class CloudSimFCFS {
 	/** The vmlist. */
 	private static List<Vm> vmlist;
 
+	public static double FCFS_FinishTime;
+
+	public static double fcfs_val;
+
+	
+
 	private static List<Vm> createVM(int userId, int vms) {
 
 		//Creates a container to store VMs. This list is passed to the broker later
@@ -98,6 +104,7 @@ public class CloudSimFCFS {
 	/**
 	 * Creates main() to run this example
 	 */
+	
 	public static void main(String[] args) 
 	{
 		Log.printLine("Starting CloudSimExampleFCFS...");
@@ -140,7 +147,8 @@ public class CloudSimFCFS {
 			CloudSim.stopSimulation();
 
 			printCloudletList(newList,newList1);
-
+			
+			
 			
 		}
 		catch (Exception e)
@@ -149,7 +157,7 @@ public class CloudSimFCFS {
 			Log.printLine("The simulation has been terminated due to an unexpected error");
 		}
 	}
-
+	
 	private static Datacenter createDatacenter(String name){
 
 		// Here are the steps needed to create a PowerDatacenter:
@@ -281,7 +289,7 @@ public class CloudSimFCFS {
 	 */
 	private static void printCloudletList(List<Cloudlet> list,List<Vm> list1) {
 		int size = list.size();
-		Cloudlet cloudlet;
+		Cloudlet cloudlet = null;
 		
 		String indent = "    ";
 		Log.printLine();
@@ -306,8 +314,18 @@ public class CloudSimFCFS {
 		}
 	
 		
+		
 		Log.printLine("FCFS Sheduling completed...");
+		
+		FCFS_FinishTime=cloudlet.getFinishTime();
+		
+		
+	
+		
 
 	}
+	
+	
+	
 }
 

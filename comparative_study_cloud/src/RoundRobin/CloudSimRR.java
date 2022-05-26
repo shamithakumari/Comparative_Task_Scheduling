@@ -34,7 +34,8 @@ import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
  * An example showing how to create
  * scalable simulations.
  */
-public class CloudSimRR {
+public class CloudSimRR
+{
 
 	/** The cloudlet list. */
 	private static List<Cloudlet> cloudletList;
@@ -44,6 +45,8 @@ public class CloudSimRR {
 //           private static Datacenter[] datacenter;
 //    private static double[][] commMatrix;
 //    private static double[][] execMatrix;
+	
+	public static double RR_FinishTime;
 
 	private static List<Vm> createVM(int userId, int vms) {
 
@@ -274,7 +277,7 @@ public class CloudSimRR {
 	 */
 	private static void printCloudletList(List<Cloudlet> list,List<Vm> list1) {
 		int size = list.size();
-		Cloudlet cloudlet;
+		Cloudlet cloudlet=null;
 		
 		String indent = "    ";
 		Log.printLine();
@@ -299,6 +302,10 @@ public class CloudSimRR {
 		}
 	
 		Log.printLine("Round Robin Sheduling completed...");
+		
+		RR_FinishTime=cloudlet.getFinishTime();
+		Log.printLine("Final Finish time for Round Robin is= "+RR_FinishTime);
+
 
 	}
 

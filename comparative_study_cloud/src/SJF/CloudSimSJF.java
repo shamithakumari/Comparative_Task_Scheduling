@@ -39,6 +39,8 @@ public class CloudSimSJF {
 
 	/** The vmlist. */
 	private static List<Vm> vmlist;
+
+	public static double SJF_FinishTime;
 	
 	private static List<Vm> createVM(int userId, int vms) {
 
@@ -278,7 +280,7 @@ public class CloudSimSJF {
 	 */
 	private static void printCloudletList(List<Cloudlet> list,List<Vm> list1) {
 		int size = list.size();
-		Cloudlet cloudlet;
+		Cloudlet cloudlet=null;
 		
 		String indent = "    ";
 		Log.printLine();
@@ -301,10 +303,12 @@ public class CloudSimSJF {
 						indent + indent + indent + dft.format(cloudlet.getFinishTime()));
 			}
 		}
-		Log.printLine("Sheduling completed...");
+		Log.printLine("SJF Sheduling completed...");
 
 		
-		
+		SJF_FinishTime=cloudlet.getFinishTime();
+		Log.printLine("Final Finish time for SJF is= "+SJF_FinishTime);
+
 
 	}
 }
