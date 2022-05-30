@@ -304,7 +304,8 @@ public class CloudSimRR
 		Log.printLine("Round Robin Sheduling completed...");
 		
 		RR_FinishTime=cloudlet.getFinishTime();
-		Log.printLine("Final Finish time for Round Robin is= "+RR_FinishTime);
+		System.out.printf("Final Finish time for RR Algorithm is="+RR_FinishTime);
+		
 
 
 	}

@@ -307,7 +307,7 @@ public class CloudSimSJF {
 
 		
 		SJF_FinishTime=cloudlet.getFinishTime();
-		Log.printLine("Final Finish time for SJF is= "+SJF_FinishTime);
+		System.out.printf("Final Finish time for SJF is="+SJF_FinishTime);
 
 
 	}

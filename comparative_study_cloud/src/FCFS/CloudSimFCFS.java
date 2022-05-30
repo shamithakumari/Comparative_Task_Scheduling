@@ -318,7 +318,7 @@ public class CloudSimFCFS {
 		Log.printLine("FCFS Sheduling completed...");
 		
 		FCFS_FinishTime=cloudlet.getFinishTime();
-		
+		System.out.printf("Final Finish time for FCFS is="+FCFS_FinishTime);
 		
 	
 		
