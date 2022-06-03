@@ -2,7 +2,7 @@
 
 The basic idea of Task Scheduling is, arranging the incoming requests(tasks) in a particular manner so that available resources will be utilized appropriately. Cloud computing is the technology that delivers services through the internet where the users will submit their requests. Each service has a number of users and These users may generate a number of requests at a time. The system should be able to handle these requests, So we schedule these tasks in a distributed manner so that no fault occurs and requests are distributed in an efficient manner to the available resources.
 
-In our project, we implemented three task scheduling algorithms, which are First Come First Serve(FCFS), Shortest Job First(SJF), and Round Robin(RR). We assigned the values of the VM, Cloudlet, Datacenter, and system parameters as mentioned in the research paper. By comparing the result of task scheduling, we found that the RR approach will give best results compared to the other two algorithms based on finishing time.
+In our project, we implemented three task scheduling algorithms, which are First Come First Serve(FCFS), Shortest Job First(SJF), and Round Robin(RR). We assigned the values of the VM, Cloudlet, Datacenter, and system parameters as mentioned in the research paper we refered. By comparing the result of task scheduling, we found that the RR approach will give best results compared to the other two algorithms based on finishing time.
 
 ### CloudSim
 
