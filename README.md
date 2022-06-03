@@ -18,7 +18,7 @@ https://www.eclipse.org/downloads/
 * Install CloudSim3.0.3
 * Download the cloudsim-3.0.3 zip file from the below link and open it in Eclipse IDE
 https://github.com/Cloudslab/cloudsim/releases.
-* Open the project in eclipse and add the required Jar files that are present in the Jar folder above.
+* Open the project in eclipse and add the required Jar files that are present in the Jars folder above.
 * If any error occurs while executing in eclipse, left-click on project select properties, select java compiler, enable the project-specific setting, then apply and close.
 
 CloudSim version used → **CloudSim.3.0.3**
